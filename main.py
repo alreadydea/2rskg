@@ -108,7 +108,7 @@ async def account_login(bot: Client, m: Message):
     except Exception:
             res = "UN"
     
-    await editable.edit("**Enter Your Name**\n**Ex : ** 🅰🅸🆁 🅿🅷🅴🅾🅽🅸🆇™")
+    await editable.edit("**Enter Your Name**\n**Ex : ** hhh")
     input3: Message = await bot.listen(editable.chat.id)
     raw_text3 = input3.text
     await input3.delete(True)
@@ -180,8 +180,8 @@ async def account_login(bot: Client, m: Message):
                 cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
             try:
-                cc = f'[ 🎬 ] **Vid ID : **{str(count).zfill(3)}\n**Video Title :** {name1}({res}) 『 🅰🅸🆁 🅿🅷🅴🅾🅽🅸🆇™』.mp4\n**Batch Name :** {b_name}\n\n**Extracted By ➤** {CR}'
-                cc1 = f'[ 📕 ] **Pdf ID : **{str(count).zfill(3)}\n**File Title :** {name1} 『 🅰🅸🆁 🅿🅷🅴🅾🅽🅸🆇™ 』.pdf\n**Batch Name :**{b_name}\n\n**Extracted By ➤** {CR}'
+                cc = f'[ 🎬 ] **Vid ID : **{str(count).zfill(3)}\n**Video Title :** {name1}({res}) 『 hhh』.mp4\n**Batch Name :** {b_name}\n\n**Extracted By ➤** {CR}'
+                cc1 = f'[ 📕 ] **Pdf ID : **{str(count).zfill(3)}\n**File Title :** {name1} 『 hhh 』.pdf\n**Batch Name :**{b_name}\n\n**Extracted By ➤** {CR}'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
@@ -208,7 +208,7 @@ async def account_login(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    prog = await m.reply_text(f"**Downloading:-**\n\n**Title ➤** `{name}`\n**Quality ➤** `{raw_text2}`\n\n**Bot By ➤ **🅰🅸🆁 🅿🅷🅴🅾🅽🅸🆇™")
+                    prog = await m.reply_text(f"**Downloading:-**\n\n**Title ➤** `{name}`\n**Quality ➤** `{raw_text2}`\n\n**Bot By ➤ **hhh")
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
                     await prog.delete(True)
@@ -266,7 +266,7 @@ async def vision_pdf(bot: Client, m: Message):
             url = links[i][1]
             name1 = links[i][0].replace("\t", "").replace(":", "").replace("/","").replace("+", "").replace("#", "").replace("|", "").replace("@", "").replace("*", "").replace(".", "").strip()[:57]
             name = f'{str(count).zfill(3)}) {name1}'
-            cc = f'{str(count).zfill(3)}. {name1}.pdf\n\n**Batch:-** {raw_texty}\n\n**Extracted By ➤** 🅰🅸🆁 🅿🅷🅴🅾🅽🅸🆇™ '
+            cc = f'{str(count).zfill(3)}. {name1}.pdf\n\n**Batch:-** {raw_texty}\n\n**Extracted By ➤** hhh '
             ka = await helper.vision(url, name, cookies)
             await m.reply_document(ka, caption=cc)
             count += 1
